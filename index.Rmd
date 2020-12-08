@@ -1,0 +1,54 @@
+--- 
+title: "Temas básicos para Estadística inferencial"
+author: "paguzmang | U.CES"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: 
+  bookdown::gitbook:
+    split_by: "section+number"
+    css: styles.css
+documentclass: book
+bibliography: ref_bioestad.bib
+csl: apa.csl
+biblio-style: apalike
+link-citations: yes
+github-repo: paguzmang/BasicosBioestad
+description: "Temas basicos"
+---
+
+```{r setuplib, include = F}
+library(knitr)
+library(MASS)
+library(tidyverse)
+library(kableExtra)
+```
+
+```{r setup, include=F}
+knitr::opts_chunk$set(echo = F, fig.align = 'center', message = F, 
+                      warning = F, comment = '#>')
+```
+
+```{r bibpkg, include=FALSE, eval = FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(.packages(), 'bookdown', 'knitr', 'rmarkdown'  ), 'packages.bib')
+```
+
+
+```{r funs, include = F}
+# Algunas funciones
+elinea <- function(){
+  # Funcion para generar un salto de linea donde sea necesario
+  salida <- knitr::is_latex_output()
+  if(!salida) '<br>' else '\\medskip'
+}
+```
+
+# Presentación {-}
+
+Este material recopila temas que son requeridos para comenzar a estudiar **Estadística inferencial** (estimación y pruebas de hipótesis). Se incluyen aquí algunos temás en matemática, estadística descriptiva y modelos de probabilidad. Los temas presentados se han preparado para una lectura rápida pues se asume que el estudiante ya los estudió con cierto detalle en cursos completos. También haremos uso del software **R** para ejecutar procedimientos de cálculo y graficación en matemática y estadística.
+
+
+
+
+
+
